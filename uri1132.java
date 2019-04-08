@@ -1,45 +1,41 @@
+package uri1332;
 import java.util.Scanner;
 
-public class uri1132
-{
-    public static void main (String[] args)
-    {
-        Scanner scan = new Scanner(System.in);
-        
-        int vlr1,vlr2,soma;
-        
-        vlr1 = scan.nextInt();
-        vlr2 = scan.nextInt();
-        soma = 0;
-        
-        if (vlr1 > vlr2)
-        {
-          for (int i = vlr2; i <= vlr1; i++)
-          {
-              if (i%13 != 0)
-              {
-                  soma = soma + i;
-              }
-          }
-          
-          System.out.println(soma);
-        }
-        
-        
-        
-        else if (vlr2 > vlr1)
-        {
-          for (int i = vlr1; i <= vlr2; i++)
-          {
-               if (i%13 != 0)
-              {
-                  soma = soma + i;
-              }
-            
-          }
-          
-          System.out.println(soma);
-        }
-        
-    }
+public class uri1132 {
+       
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		int numPalavra = scan.nextInt(), i;
+		String palavra;
+		
+		for(i = 0; i < numPalavra;i++) {
+			
+			palavra = scan.next();
+			
+			if(palavra.length() == 5) {
+				
+				System.out.println("3");
+				
+			}else if ((palavra.charAt(0) == 't' && palavra.charAt(1) == 'w')) {
+				
+				System.out.println("2");
+				
+			} else if ((palavra.charAt(0) == 't' && palavra.charAt(2) == 'o')){
+				
+				System.out.println("2");
+				
+			} else if ((palavra.charAt(1) == 'w' && palavra.charAt(2) == 'o')) {
+				
+				System.out.println("2");
+				
+			} else {
+				
+				System.out.println("1");
+				
+			}
+		}
+		
+		scan.close();
+	}
 }
